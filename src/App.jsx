@@ -7,13 +7,6 @@ function App() {
   const [isFocusMode, setIsFocusMode] = useState(false);
 
   useEffect(() => {
-    // Check system preference on load
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    }
-  }, []);
-
-  useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
